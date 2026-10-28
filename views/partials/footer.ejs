@@ -1,0 +1,61 @@
+<footer class="mt-auto bg-slate-900 text-slate-400 text-sm border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Brand column -->
+      <div>
+        <h3 class="text-white font-bold text-base mb-2"><%= config.appName %></h3>
+        <p class="text-xs leading-relaxed text-slate-400 max-w-sm mb-4">
+          Aplikasi backend & frontend terpadu berbasis Express.js MVC, menyajikan data menu catering nusantara dan REST API terstruktur untuk tugas praktikum PPAW.
+        </p>
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-mono">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Environment: <%= config.env %> (Port <%= config.port %>)
+        </span>
+      </div>
+
+      <!-- Links Column -->
+      <div>
+        <h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-3">Endpoint API Tersedia</h4>
+        <ul class="space-y-2 text-xs font-mono">
+          <li>
+            <a href="/api/status" target="_blank" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+              <span class="text-emerald-400">GET</span> /api/status &rarr; Status Server
+            </a>
+          </li>
+          <li>
+            <a href="/api/produk" target="_blank" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+              <span class="text-emerald-400">GET</span> /api/produk &rarr; Array Data Produk
+            </a>
+          </li>
+          <li>
+            <a href="/api/produk/1" target="_blank" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+              <span class="text-emerald-400">GET</span> /api/produk/:id &rarr; Detail Produk ID
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Group Column -->
+      <div>
+        <h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-3"><%= config.kelompok.nama %> · <%= config.kelompok.kelas %></h4>
+        <ul class="space-y-1.5 text-xs">
+          <% config.kelompok.anggota.forEach(function(m) { %>
+            <li class="flex items-center justify-between text-slate-400 border-b border-slate-800/60 pb-1">
+              <span class="text-slate-300 font-medium"><%= m.nama %></span>
+              <span class="font-mono text-slate-500"><%= m.nim %></span>
+            </li>
+          <% }); %>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="mt-8 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+      <p>&copy; 2026 <%= config.appName %> — TI-501 Pengembangan Aplikasi Web, Universitas Muhammadiyah Yogyakarta.</p>
+      <p class="mt-2 sm:mt-0 font-mono">Node.js · Express.js · EJS · Tailwind CSS · MVC Pattern</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

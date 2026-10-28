@@ -1,0 +1,31 @@
+{
+  "name": "paw-project-catering-bu-sumiyati",
+  "version": "1.0.0",
+  "description": "PPAW Week 7: Integrasi Frontend, REST API, dan Middleware Logger - MVC Express.js dengan EJS & Tailwind CSS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "paw",
+    "week7",
+    "express",
+    "mvc",
+    "ejs",
+    "tailwind",
+    "rest-api",
+    "logger",
+    "umy",
+    "kelompok3"
+  ],
+  "author": "Kelompok 3 Kelas A - TI UMY",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
